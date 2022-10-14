@@ -53,4 +53,23 @@
 //   //   };err because age is missing ,even a single property should not be missed or added
 // }
 {
+    //*******explicit types ******** */
+    var char = void 0;
+    var age = void 0;
+    var isLoggedIn = void 0;
+    //age= "hello" //err
+    age = 15;
+    // arrays
+    var ninjas = [];
+    ninjas.push("shaun");
+    //union types
+    var mixed = [];
+    mixed.push("hello");
+    mixed.push(20);
+    mixed.push(false);
+    console.log(mixed);
+    var uid = void 0;
+    uid = "123";
+    uid = 123;
+    // uid = true //error
 }

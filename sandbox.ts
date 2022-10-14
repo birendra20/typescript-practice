@@ -66,5 +66,60 @@
 //   //   };err because age is missing ,even a single property should not be missed or added
 // }
 
+// {
+//   //*******explicit types ******** */
+
+//   let char: string;
+//   let age: number;
+//   let isLoggedIn: boolean;
+
+//   //age= "hello" //err
+//   age = 15;
+
+//   // arrays
+//   let ninjas: string[] = [];
+
+//   ninjas.push("shaun");
+
+//   //union types
+
+//   let mixed: (string | number | boolean)[] = [];
+//   mixed.push("hello");
+//   mixed.push(20);
+//   mixed.push(false);
+//   console.log(mixed);
+
+//   let uid: string | number;
+
+//   uid = "123";
+//   uid = 123;
+//   // uid = true //error
+
+//   //objects
+
+//   let ninjaOne: object; //notice here while declaring type of variable there is "colon", not a "="
+//   ninjaOne = []; //will work ,array is also a object
+//   //ninjaOne="zzbn" //error
+//   ninjaOne = { name: "alpha", age: 32, beltColor: "black" };
+
+//   let ninjaTwo: {
+//     name: string;
+//     age: number;
+//     beltColor: string;
+//   };
+// }
+
 {
+  // dynamic (any)  types
+
+  let age: any = 25;
+
+  age = true;
+  console.log(age); //true
+
+  age = "hello";
+  console.log(age); //hello
+
+  age = { name: "luigi" };
+  console.log(age);
 }
