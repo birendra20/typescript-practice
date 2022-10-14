@@ -109,17 +109,70 @@
 //   };
 // }
 
+// {
+//   // dynamic (any)  types
+
+//   let age: any = 25;
+
+//   age = true;
+//   console.log(age); //true
+
+//   age = "hello";
+//   console.log(age); //hello
+
+//   age = { name: "luigi" };
+//   console.log(age);
+
+//   let mixed: any[] = [];
+
+//   mixed.push(5);
+//   mixed.push("mario");
+//   mixed.push(false);
+//   console.log(mixed);
+
+//   let ninja: { name: any; age: any };
+
+//   ninja = { name: "mario", age: 24 };
+//   console.log(ninja);
+
+//   ninja = { name: 24, age: "mario" };
+//   console.log(ninja);
+//   console.log("first");
+// }
+
 {
-  // dynamic (any)  types
+  //function
 
-  let age: any = 25;
+  let greet: Function;
 
-  age = true;
-  console.log(age); //true
+  //greet = "hello";/err
 
-  age = "hello";
-  console.log(age); //hello
+  greet = () => {
+    console.log("hello again");
+  };
 
-  age = { name: "luigi" };
-  console.log(age);
+  //void represent complete lack of value
+
+  const add = (a: number, b: number, c: number | string = 10): void => {
+    console.log(a + b);
+    console.log(c);
+  };
+  add(2, 3);
+  add(4, 5, "string");
+  add(5, 10, 20);
+
+  const min = (a: number, b: number) => {
+    return a + b;
+  };
+  let results = min(10, 7);
+  results = 23; //ok
+  //result = "str" //err
+
+  //we can also explicitly define the type of return value from a function
+  const minus = (a: number, b: number): number => {
+    return a + b;
+  };
+  let result = minus(10, 7);
+  result = 23; //ok
+  //result = "str" //err
 }
