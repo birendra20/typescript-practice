@@ -140,39 +140,54 @@
 //   console.log("first");
 // }
 
-{
-  //function
+// {
+//   //******************functions*************************
 
-  let greet: Function;
+//   let greet: Function;
 
-  //greet = "hello";/err
+//   //greet = "hello";/err
 
-  greet = () => {
-    console.log("hello again");
-  };
+//   greet = () => {
+//     console.log("hello again");
+//   };
 
-  //void represent complete lack of value
+//   //void represent complete lack of value
 
-  const add = (a: number, b: number, c: number | string = 10): void => {
-    console.log(a + b);
-    console.log(c);
-  };
-  add(2, 3);
-  add(4, 5, "string");
-  add(5, 10, 20);
+//   const add = (a: number, b: number, c: number | string = 10): void => {
+//     console.log(a + b);
+//     console.log(c);
+//   };
+//   add(2, 3);
+//   add(4, 5, "string");
+//   add(5, 10, 20);
 
-  const min = (a: number, b: number) => {
-    return a + b;
-  };
-  let results = min(10, 7);
-  results = 23; //ok
-  //result = "str" //err
+//   const min = (a: number, b: number) => {
+//     return a + b;
+//   };
+//   let results = min(10, 7);
+//   results = 23; //ok
+//   //result = "str" //err
 
-  //we can also explicitly define the type of return value from a function
-  const minus = (a: number, b: number): number => {
-    return a + b;
-  };
-  let result = minus(10, 7);
-  result = 23; //ok
-  //result = "str" //err
-}
+//   //we can also explicitly define the type of return value from a function
+//   const minus = (a: number, b: number): number => {
+//     return a + b;
+//   };
+//   let result = minus(10, 7);
+//   result = 23; //ok
+//   //result = "str" //err
+// }
+
+// {
+//   // type aliases
+
+//   type StringOrNum = string | number;
+//   type objWithName = { name: string; uid: StringOrNum };
+
+//   const logDetails = (uid: StringOrNum, item: string) => {
+//     console.log(`${item} has a uid ${uid}`);
+//   };
+
+//   const greetAgain = (user: objWithName) => {
+//     console.log(`${user.name} says hello`);
+//   };
+// }
